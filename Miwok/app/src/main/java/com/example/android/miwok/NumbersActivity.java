@@ -16,7 +16,6 @@
 package com.example.android.miwok;
 
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,25 +30,24 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_numbers);
 
         // Create a list of words
-        ArrayList<String> words = new ArrayList<>();
-        words.add("one");
-        words.add("two");
-        words.add("three");
-        words.add("four");
-        words.add("five");
-        words.add("six");
-        words.add("seven");
-        words.add("eight");
-        words.add("nine");
-        words.add("ten");
+        ArrayList<com.example.android.miwok.word> words = new ArrayList<>();
+        words.add(new word("one", "lutti"));
+        words.add(new word("two","otiiko"));
+        words.add(new word("three","tolookosu"));
+        words.add(new word("four","oyyisa"));
+        words.add(new word("five","massokka"));
+        words.add(new word("six","temmokka"));
+        words.add(new word("seven","kenekaku"));
+        words.add(new word("eight","kawinta"));
+        words.add(new word("nine","wo’e"));
+        words.add(new word("ten","na’aacha"));
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
         // adapter knows how to create layouts for each item in the list, using the
-        // simple_list_item_1.xml layout resource defined in the Android framework.
-        // This list item layout contains a single {@link TextView}, which the adapter will set to
-        // display a single word.
-        ArrayAdapter<String> itemsAdapter =
-                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, words);
+        // list_item.xml layout resource defined in the layout file.
+        // This list item layout contains two {@link TextView}, which the adapter will set to
+        // display two words.
+        wordAdaptor itemsAdapter = new wordAdaptor(this, words);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
