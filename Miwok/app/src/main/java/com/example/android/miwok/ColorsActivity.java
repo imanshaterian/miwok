@@ -32,14 +32,14 @@ public class ColorsActivity extends AppCompatActivity {
 
         // Create a list of words
         ArrayList<com.example.android.miwok.word> words = new ArrayList<>();
-            words.add(new word("red","weṭeṭṭi"));
-            words.add(new word("green","chokokki"));
-            words.add(new word("brown","ṭakaakki"));
-            words.add(new word("gray","ṭopoppi"));
-            words.add(new word("black","kululli"));
-            words.add(new word("white","kelelli"));
-            words.add(new word("dusty yellow","ṭopiisә"));
-            words.add(new word("mustard yellow","chiwiiṭә"));
+            words.add(new word("red","weṭeṭṭi",R.mipmap.ic_launcher));
+            words.add(new word("green","chokokki",R.mipmap.ic_launcher));
+            words.add(new word("brown","ṭakaakki",R.mipmap.ic_launcher));
+            words.add(new word("gray","ṭopoppi",R.mipmap.ic_launcher));
+            words.add(new word("black","kululli",R.mipmap.ic_launcher));
+            words.add(new word("white","kelelli",R.mipmap.ic_launcher));
+            words.add(new word("dusty yellow","ṭopiisә",R.mipmap.ic_launcher));
+            words.add(new word("mustard yellow","chiwiiṭә",R.mipmap.ic_launcher));
 
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The

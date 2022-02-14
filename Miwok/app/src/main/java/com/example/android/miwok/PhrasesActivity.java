@@ -32,16 +32,16 @@ public class PhrasesActivity extends AppCompatActivity {
 
         // Create a list of words
         ArrayList<com.example.android.miwok.word> words = new ArrayList<>();
-        words.add(new word("/*Where are you going?","minto wuksus"));
-        words.add(new word("What is your name?","tinnә oyaase'nә"));
-        words.add(new word("My name is...","oyaaset..."));
-        words.add(new word("How are you feeling?","michәksәs?"));
-        words.add(new word("I’m feeling good.","kuchi achit"));
-        words.add(new word("Are you coming?","әәnәs'aa?"));
-        words.add(new word("Yes, I’m coming.","hәә’ әәnәm"));
-        words.add(new word("I’m coming.","әәnәm"));
-        words.add(new word("Let’s go.","yoowutis"));
-        words.add(new word("Come here.","әnni'nem"));
+        words.add(new word("/*Where are you going?","minto wuksus", R.mipmap.ic_launcher));
+        words.add(new word("What is your name?","tinnә oyaase'nә", R.mipmap.ic_launcher));
+        words.add(new word("My name is...","oyaaset...", R.mipmap.ic_launcher));
+        words.add(new word("How are you feeling?","michәksәs?", R.mipmap.ic_launcher));
+        words.add(new word("I’m feeling good.","kuchi achit", R.mipmap.ic_launcher));
+        words.add(new word("Are you coming?","әәnәs'aa?", R.mipmap.ic_launcher));
+        words.add(new word("Yes, I’m coming.","hәә’ әәnәm", R.mipmap.ic_launcher));
+        words.add(new word("I’m coming.","әәnәm", R.mipmap.ic_launcher));
+        words.add(new word("Let’s go.","yoowutis", R.mipmap.ic_launcher));
+        words.add(new word("Come here.","әnni'nem", R.mipmap.ic_launcher));
 
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The

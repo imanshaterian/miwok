@@ -32,16 +32,16 @@ public class FamilyActivity extends AppCompatActivity {
 
         // Create a list of words
         ArrayList<com.example.android.miwok.word> words = new ArrayList<>();
-        words.add(new word("father", "әpә"));
-        words.add(new word("mother", "әṭa"));
-        words.add(new word("son", "angsi"));
-        words.add(new word("daughter", "tune"));
-        words.add(new word("older brother", "taachi"));
-        words.add(new word("younger brother", "chalitti"));
-        words.add(new word("older sister", "teṭe"));
-        words.add(new word("younger sister", "kolliti"));
-        words.add(new word("grandmother", "ama"));
-        words.add(new word("grandfather", "paapa"));
+        words.add(new word("father", "әpә", R.mipmap.ic_launcher));
+        words.add(new word("mother", "әṭa", R.mipmap.ic_launcher));
+        words.add(new word("son", "angsi", R.mipmap.ic_launcher));
+        words.add(new word("daughter", "tune", R.mipmap.ic_launcher));
+        words.add(new word("older brother", "taachi", R.mipmap.ic_launcher));
+        words.add(new word("younger brother", "chalitti", R.mipmap.ic_launcher));
+        words.add(new word("older sister", "teṭe", R.mipmap.ic_launcher));
+        words.add(new word("younger sister", "kolliti", R.mipmap.ic_launcher));
+        words.add(new word("grandmother", "ama", R.mipmap.ic_launcher));
+        words.add(new word("grandfather", "paapa", R.mipmap.ic_launcher));
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
         // adapter knows how to create layouts for each item in the list, using the

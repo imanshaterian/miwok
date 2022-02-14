@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -36,6 +37,9 @@ public class wordAdaptor extends ArrayAdapter<word> {
 
         // Get the {@link word} object located at this position in the list
         word currentword = getItem(position);
+
+        ImageView image = listItemView.findViewById(R.id.imageListItem);
+        image.setImageResource(currentword.getImage());
 
         // Find the TextView in the list_item.xml layout with the ID miwok_text_view.
         TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwokListItem);
