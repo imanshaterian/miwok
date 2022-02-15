@@ -32,14 +32,14 @@ public class ColorsActivity extends AppCompatActivity {
 
         // Create a list of words
         ArrayList<com.example.android.miwok.word> words = new ArrayList<>();
-            words.add(new word("red","weṭeṭṭi",R.mipmap.ic_launcher));
-            words.add(new word("green","chokokki",R.mipmap.ic_launcher));
-            words.add(new word("brown","ṭakaakki",R.mipmap.ic_launcher));
-            words.add(new word("gray","ṭopoppi",R.mipmap.ic_launcher));
-            words.add(new word("black","kululli",R.mipmap.ic_launcher));
-            words.add(new word("white","kelelli",R.mipmap.ic_launcher));
-            words.add(new word("dusty yellow","ṭopiisә",R.mipmap.ic_launcher));
-            words.add(new word("mustard yellow","chiwiiṭә",R.mipmap.ic_launcher));
+        words.add(new word("red", "weṭeṭṭi", R.drawable.color_red));
+        words.add(new word("green", "chokokki", R.drawable.color_green));
+        words.add(new word("brown", "ṭakaakki", R.drawable.color_brown));
+        words.add(new word("gray", "ṭopoppi", R.drawable.color_gray));
+        words.add(new word("black", "kululli", R.drawable.color_black));
+        words.add(new word("white", "kelelli", R.drawable.color_white));
+        words.add(new word("dusty yellow", "ṭopiisә", R.drawable.color_dusty_yellow));
+        words.add(new word("mustard yellow", "chiwiiṭә", R.drawable.color_mustard_yellow));
 
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
@@ -52,7 +52,7 @@ public class ColorsActivity extends AppCompatActivity {
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
         // activity_numbers.xml layout file.
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
 
         // Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
         // {@link ListView} will display list items for each word in the list of words.
