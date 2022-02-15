@@ -26,5 +26,5 @@ public class word {
         return mDefaultTranslation;
     }
 
-    public int getImage(){return mImage;}
+    public int getImageResourceID(){return mImage;}
 }
