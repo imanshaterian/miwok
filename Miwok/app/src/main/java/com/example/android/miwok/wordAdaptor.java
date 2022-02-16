@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
+
 import java.util.ArrayList;
 
 /**
@@ -16,14 +18,17 @@ import java.util.ArrayList;
  */
 public class wordAdaptor extends ArrayAdapter<word> {
 
+
+    int mColor;
     /**
      * Create a new {@link wordAdaptor} object.
      *
      * @param context is the current context (i.e. Activity) that the adapter is being created in.
      * @param words   is the list of {@link word}s to be displayed.
      */
-    public wordAdaptor(Context context, ArrayList<word> words) {
+    public wordAdaptor(Context context, ArrayList<word> words, int color) {
         super(context, 0, words);
+        mColor = color;
     }
 
     @Override
@@ -53,6 +58,9 @@ public class wordAdaptor extends ArrayAdapter<word> {
         // the default TextView.
         defaultTextView.setText(currentword.getmDefaultTranslation());
 
+        View linear = listItemView.findViewById(R.id.list_item);
+        int color = ContextCompat.getColor(getContext(), mColor);
+        linear.setBackgroundColor(color);
         // Return the whole list item layout (containing 2 TextViews) so that it can be shown in
         // the ListView.
         return listItemView;

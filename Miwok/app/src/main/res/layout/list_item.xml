@@ -3,32 +3,39 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="16dp">
+    android:layout_margin="0dp"
+    android:background="@color/tan_background"
+    android:minHeight="@dimen/list_item_height">
 
     <ImageView
         android:id="@+id/imageListItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:maxHeight="@dimen/list_item_height"
+        android:maxWidth="@dimen/list_item_height"
         android:contentDescription="@string/picture"/>
 
     <LinearLayout
         android:padding="16dp"
         android:id="@+id/list_item"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/imageListItem"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        style="">
 
         <TextView
             android:id="@+id/miwokListItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp" />
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/englishListItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#fff"
             android:textSize="16sp" />
 
     </LinearLayout>

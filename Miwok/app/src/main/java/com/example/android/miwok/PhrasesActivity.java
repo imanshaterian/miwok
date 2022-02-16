@@ -49,7 +49,7 @@ public class PhrasesActivity extends AppCompatActivity {
         // list_item.xml layout resource defined in the layout file.
         // This list item layout contains two {@link TextView}, which the adapter will set to
         // display two words.
-        wordAdaptor itemsAdapter = new wordAdaptor(this, words);
+        wordAdaptor itemsAdapter = new wordAdaptor(this, words,R.color.category_phrases);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
@@ -61,5 +61,6 @@ public class PhrasesActivity extends AppCompatActivity {
         // Do this by calling the setAdapter method on the {@link ListView} object and pass in
         // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
         listView.setAdapter(itemsAdapter);
+
     }
 }

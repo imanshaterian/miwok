@@ -16,18 +16,37 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/primary_color</item>
-        <item name="colorPrimaryDark">@color/primary_dark_color</item>
+        <item name="colorPrimary">#4A312A</item>
+        <item name="colorPrimaryDark">#2F1D1A</item>
+        <item name="colorOnBackground">#fff7da</item>
     </style>
 
     <!-- Style for a category of vocabulary words -->
     <style name="CategoryStyle">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/list_item_height</item>
+        <item name="android:layout_height">88dp</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:padding">16dp</item>
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColor">#fff</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+    <style name="phrases">
+        <item name="colorOnBackground">#16afca</item>
+    </style>
+
+    <style name="colors">
+        <item name="colorOnBackground">#8800a0</item>
+    </style>
+
+    <style name="family">
+        <item name="colorOnBackground">#379237</item>
+    </style>
+
+    <style name="numbers">
+        <item name="colorOnBackground">#fd8e09</item>
     </style>
 </resources>
