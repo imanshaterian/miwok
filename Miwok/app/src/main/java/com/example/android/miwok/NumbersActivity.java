@@ -70,6 +70,8 @@ public class NumbersActivity extends AppCompatActivity {
 
             // Start the audio file
             media.start();
+            media.setOnCompletionListener(MediaPlayer::release);
+
         });
     }
 }

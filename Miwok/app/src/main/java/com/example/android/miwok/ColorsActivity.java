@@ -67,6 +67,7 @@ public class ColorsActivity extends AppCompatActivity {
             word word = words.get(i);
             media = MediaPlayer.create(ColorsActivity.this, word.getAudioResourceID());
             media.start();
+            media.setOnCompletionListener(MediaPlayer::release);
         });
     }
 }

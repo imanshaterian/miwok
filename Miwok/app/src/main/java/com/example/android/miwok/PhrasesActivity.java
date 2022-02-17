@@ -35,7 +35,7 @@ public class PhrasesActivity extends AppCompatActivity {
 
         // Create a list of words
         final ArrayList<com.example.android.miwok.word> words = new ArrayList<>();
-        words.add(new word("/*Where are you going?", "minto wuksus", R.raw.phrase_where_are_you_going));
+        words.add(new word("Where are you going?", "minto wuksus", R.raw.phrase_where_are_you_going));
         words.add(new word("What is your name?", "tinnә oyaase'nә", R.raw.phrase_what_is_your_name));
         words.add(new word("My name is...", "oyaaset...", R.raw.phrase_my_name_is));
         words.add(new word("How are you feeling?", "michәksәs?", R.raw.phrase_how_are_you_feeling));
@@ -69,6 +69,8 @@ public class PhrasesActivity extends AppCompatActivity {
             word word = words.get(i);
             media = MediaPlayer.create(PhrasesActivity.this, word.getAudioResourceID());
             media.start();
+            media.setOnCompletionListener(MediaPlayer::release);
+
         });
     }
 }

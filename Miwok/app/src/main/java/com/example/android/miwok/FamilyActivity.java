@@ -68,6 +68,8 @@ public class FamilyActivity extends AppCompatActivity {
             word word = words.get(i);
             media = MediaPlayer.create(FamilyActivity.this, word.getAudioResourceID());
             media.start();
+            media.setOnCompletionListener(MediaPlayer::release);
+
         });
     }
 }
