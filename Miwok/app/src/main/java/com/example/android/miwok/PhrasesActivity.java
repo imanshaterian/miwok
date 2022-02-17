@@ -15,6 +15,7 @@
  */
 package com.example.android.miwok;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.ListView;
 
@@ -24,6 +25,8 @@ import java.util.ArrayList;
 
 public class PhrasesActivity extends AppCompatActivity {
 
+    private MediaPlayer media;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,17 +34,17 @@ public class PhrasesActivity extends AppCompatActivity {
 
 
         // Create a list of words
-        ArrayList<com.example.android.miwok.word> words = new ArrayList<>();
-        words.add(new word("/*Where are you going?","minto wuksus"));
-        words.add(new word("What is your name?","tinnә oyaase'nә"));
-        words.add(new word("My name is...","oyaaset..."));
-        words.add(new word("How are you feeling?","michәksәs?"));
-        words.add(new word("I’m feeling good.","kuchi achit"));
-        words.add(new word("Are you coming?","әәnәs'aa?"));
-        words.add(new word("Yes, I’m coming.","hәә’ әәnәm"));
-        words.add(new word("I’m coming.","әәnәm"));
-        words.add(new word("Let’s go.","yoowutis"));
-        words.add(new word("Come here.","әnni'nem"));
+        final ArrayList<com.example.android.miwok.word> words = new ArrayList<>();
+        words.add(new word("/*Where are you going?", "minto wuksus", R.raw.phrase_where_are_you_going));
+        words.add(new word("What is your name?", "tinnә oyaase'nә", R.raw.phrase_what_is_your_name));
+        words.add(new word("My name is...", "oyaaset...", R.raw.phrase_my_name_is));
+        words.add(new word("How are you feeling?", "michәksәs?", R.raw.phrase_how_are_you_feeling));
+        words.add(new word("I’m feeling good.", "kuchi achit", R.raw.phrase_im_feeling_good));
+        words.add(new word("Are you coming?", "әәnәs'aa?", R.raw.phrase_are_you_coming));
+        words.add(new word("Yes, I’m coming.", "hәә’ әәnәm", R.raw.phrase_yes_im_coming));
+        words.add(new word("I’m coming.", "әәnәm", R.raw.phrase_im_coming));
+        words.add(new word("Let’s go.", "yoowutis", R.raw.phrase_lets_go));
+        words.add(new word("Come here.", "әnni'nem", R.raw.phrase_come_here));
 
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
@@ -49,7 +52,7 @@ public class PhrasesActivity extends AppCompatActivity {
         // list_item.xml layout resource defined in the layout file.
         // This list item layout contains two {@link TextView}, which the adapter will set to
         // display two words.
-        wordAdaptor itemsAdapter = new wordAdaptor(this, words,R.color.category_phrases);
+        wordAdaptor itemsAdapter = new wordAdaptor(this, words, R.color.category_phrases);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
@@ -62,5 +65,10 @@ public class PhrasesActivity extends AppCompatActivity {
         // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
         listView.setAdapter(itemsAdapter);
 
+        listView.setOnItemClickListener((adapterView, view, i, l) -> {
+            word word = words.get(i);
+            media = MediaPlayer.create(PhrasesActivity.this, word.getAudioResourceID());
+            media.start();
+        });
     }
 }

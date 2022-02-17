@@ -1,6 +1,7 @@
 package com.example.android.miwok;
 
 import android.content.Context;
+import android.media.MediaPlayer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,8 @@ public class wordAdaptor extends ArrayAdapter<word> {
 
 
     int mColor;
+    MediaPlayer media;
+
     /**
      * Create a new {@link wordAdaptor} object.
      *
@@ -61,6 +64,7 @@ public class wordAdaptor extends ArrayAdapter<word> {
         View linear = listItemView.findViewById(R.id.list_item);
         int color = ContextCompat.getColor(getContext(), mColor);
         linear.setBackgroundColor(color);
+
         // Return the whole list item layout (containing 2 TextViews) so that it can be shown in
         // the ListView.
         return listItemView;
