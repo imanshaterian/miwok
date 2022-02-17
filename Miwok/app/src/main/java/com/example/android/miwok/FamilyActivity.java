@@ -65,11 +65,14 @@ public class FamilyActivity extends AppCompatActivity {
         listView.setAdapter(itemsAdapter);
 
         listView.setOnItemClickListener((adapterView, view, i, l) -> {
+            if (media != null) {
+                // Regardless of the current state of the media player, release its resources
+                // because we no longer need it.
+                media.release();}
             word word = words.get(i);
             media = MediaPlayer.create(FamilyActivity.this, word.getAudioResourceID());
             media.start();
             media.setOnCompletionListener(MediaPlayer::release);
-
         });
     }
 }

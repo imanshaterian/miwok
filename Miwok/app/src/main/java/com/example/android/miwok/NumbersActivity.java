@@ -61,6 +61,10 @@ public class NumbersActivity extends AppCompatActivity {
 
         // Set a click listener to play the audio when the list item is clicked on
         listView.setOnItemClickListener((adapterView, view, position, l) -> {
+            if (media != null) {
+                // Regardless of the current state of the media player, release its resources
+                // because we no longer need it.
+                media.release();}
             // Get the {@link Word} object at the given position the user clicked on
             word word = words.get(position);
 
