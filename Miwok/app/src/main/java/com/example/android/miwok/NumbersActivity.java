@@ -28,6 +28,15 @@ public class NumbersActivity extends AppCompatActivity {
     private MediaPlayer media;
 
     @Override
+    protected void onStop() {
+        super.onStop();
+        if (media != null) {
+            // Regardless of the current state of the media player, release its resources
+            // because we no longer need it.
+            media.release();}
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.words_list);
@@ -77,5 +86,7 @@ public class NumbersActivity extends AppCompatActivity {
             media.setOnCompletionListener(MediaPlayer::release);
 
         });
+
+
     }
 }
